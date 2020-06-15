@@ -32,11 +32,11 @@ replaceAllButton.addEventListener("click", function () {
         for (let innerIndex = 0; innerIndex < currentRowsCellElements.length; innerIndex += 1) {
             let currentRowsCellElement = currentRowsCellElements[innerIndex];
 
-            if (currentRowsCellElement.innerHTML.includes(findInputValue)) {
-
-                currentRowsCellElement.innerHTML = currentRowsCellElement.innerHTML.replace(findInputValue, replaceInputValue)
-
-            }
+           
+           while (currentRowsCellElement.innerHTML.includes(findInputValue)) {
+               currentRowsCellElement.innerHTML = currentRowsCellElement.innerHTML.replace(findInputValue, replaceInputValue)
+           }
+           
         }
     }
 });
